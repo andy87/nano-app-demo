@@ -5,7 +5,7 @@
  * @var string $content
  */
 
-use and_y87\nano\components\app\View;
+use nano\Components\Web\View;
 
 ?>
 
@@ -17,8 +17,10 @@ use and_y87\nano\components\app\View;
         <link href="/css/styles.css" rel="stylesheet">
     </head>
     <body>
+        Layout <?= __FILE__ ?>
         <header>
             <nav>
+                <?= $this->render('~views/_layouts/_menu'); ?>
                 <!-- nav -->
             </nav>
         </header>

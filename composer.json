@@ -1,18 +1,28 @@
 {
-  "name": "andy87/nano-app-demo",
+  "name": "andy87/nano-app",
   "type": "app",
-  "description": "Demo app on PHP framework 'nano' v1",
+  "description": "App template on PHP framework 'nano' v1",
   "license": "MIT",
   "require": {
     "php": ">=8.0",
-    "andy87/nano-framework" : "master"
+    "andy87/nano-framework" : "master",
+    "andy87/curl-requester" : "dev-main"
   },
   "repositories": [
     {
-      "url": "https://github.com/andy87/nano-framework.git",
-      "type": "git"
+      "url": "git@github.com:andy87/nano-framework.git",
+      "type": "vcs"
+    },
+    {
+      "url": "git@github.com:andy87/curl-requester.git",
+      "type": "vcs"
     }
   ],
+  "autoload": {
+    "psr-4": {
+      "app\\": ""
+    }
+  },
   "minimum-stability": "dev",
   "prefer-stable": true
 }
